@@ -1,10 +1,13 @@
 const express = require('express');
+const cors = require("cors");
 
 const app = express();
 
+
+app.use(cors());
 // Define a route for the root URL
-app.get('/', (req, res) => {
-  res.send('Hello, this is the backend server!');
+app.get('/check', (req, res) => {
+  res.json('Hello, this is the backend server!');
 });
 
 // Define a route for a sample API endpoint
