@@ -85,7 +85,7 @@ pipeline {
                         
                         // Construct the SSH command using Windows path and execute it using 'bat'
                         
-                        bat "ssh -i \"${env.PRIVATE_KEY_PATH}\" ${env.EC2_INSTANCE_USERNAME}@${env.EC2_INSTANCE_IP} \"echo 'after the login';  sudo docker pull hamazzaii5/depeasebackend:latest; sudo docker run -d -p 3001:80 hamazzaii5/depeasebackend:latest\""
+                        bat "ssh -i \"${env.PRIVATE_KEY_PATH}\" ${env.EC2_INSTANCE_USERNAME}@${env.EC2_INSTANCE_IP} \"echo 'after the login';  sudo docker pull hamazzaii5/depeasebackend:latest; sudo docker run -d -p 80:3001 hamazzaii5/depeasebackend:latest\""
 
 
                     }
